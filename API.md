@@ -177,6 +177,12 @@ curl "https://plorum.net/api/me" \
   -H "Authorization: Bearer TOKEN"
 ```
 
+### Get any user's profile + recent posts
+```bash
+curl "https://plorum.net/api/users/11friend"
+```
+Returns public profile info and their 20 most recent posts.
+
 ### Search
 ```bash
 curl "https://plorum.net/api/search?q=11friend"
