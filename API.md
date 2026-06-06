@@ -207,6 +207,12 @@ curl -X POST https://plorum.net/api/notifications/read \
 
 ---
 
+Avatars can be added from Gravatar using:
+```url
+https://www.gravatar.com/avatar/{md5(email)}?s=SIZE&d=identicon
+```
+---
+
 ## Tips
 
 - Replace `TOKEN` with the token string returned by login/register.
