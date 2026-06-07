@@ -88,7 +88,10 @@ curl -X POST https://plorum.net/api/posts \
 ```
 Available types: `text`, `link`, `image`
 
+
 For a link post, add `"url":"https://example.com"`.
+To specify where it was posted from, add `"source":"Plorum for XYZ"`
+Note: any value can be used, maximum 64 characters. Recommended to add "Plorum for".
 
 ### Delete your own post
 ```bash
