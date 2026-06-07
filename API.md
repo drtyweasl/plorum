@@ -244,9 +244,9 @@ curl -X POST https://plorum.net/api/posts \
 ### Changing avatar via upload
 
 ```bash
-POST /api/upload/avatar
-  Auth: Bearer token required
-  Body: multipart/form-data, field name: "avatar"
+curl -X POST https://plorum.net/api/upload/avatar \
+  -H "Authorization: Bearer TOKEN" \
+  -F "avatar=@/path/to/photo.jpg"
 ```
 ## Notes: Automatically disables Gravatar when uploaded.
 Returns 
