@@ -247,10 +247,12 @@ curl -X POST https://plorum.net/api/posts \
 POST /api/upload/avatar
   Auth: Bearer token required
   Body: multipart/form-data, field name: "avatar"
-  Accepts: JPEG, PNG, GIF, WebP — max 8MB
-  Returns: { "url": "/uploads/<filename>" }
 ```
 ## Notes: Automatically disables Gravatar when uploaded.
+Returns 
+```json
+{ "url": "/uploads/<filename>" }
+```
 ---
 
 ## Tips
