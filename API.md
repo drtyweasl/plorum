@@ -207,10 +207,38 @@ curl -X POST https://plorum.net/api/notifications/read \
 
 ---
 
+
+
 Avatars can be added from Gravatar using:
 ```url
 https://www.gravatar.com/avatar/{md5(email)}?s=SIZE&d=identicon
 ```
+---
+
+## To upload an image (and then use it in a post), do the following:
+
+### Step one (this will upload the photo to the server):
+```bash
+curl -X POST https://plorum.net/api/upload/image \
+  -H "Authorization: Bearer TOKEN" \
+  -F "image=@/path/to/photo.jpg"\
+```
+
+this will return:
+```json
+{ "url": "/uploads/abc123.jpg" }
+```
+
+## Step two (use the image in a post):
+```bash
+curl -X POST https://plorum.net/api/posts \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer TOKEN" \
+  -d '{"title":"My image post","type":"image","image_url":"/uploads/abc123.jpg","plorum":"offtopic"}'
+```
+
+### Basically, upload the image, grab the returned URL from step one, then use the URL in `image_url` on step two!
+
 ---
 
 ## Tips
