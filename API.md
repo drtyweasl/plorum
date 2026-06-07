@@ -1,6 +1,6 @@
 Plorum Base URL: `https://plorum.net`
 
-ALl requests that require authentication use a "Bearer token" in the `Authorization` header. Get the token by logging in first.
+All requests that require authentication use a "Bearer token" in the `Authorization` header. Get the token by logging in first.
 The `mobile` header is required to get a token to use, instead of a session cookie... Mobile doesn't like cookies, it thinks they're too gross.
 
 ---
